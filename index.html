@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" class="theme-light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Yhudee Empire Store — Luxury Jewelry & Timepieces</title>
+<meta name="description" content="Curated luxury jewelry and premium timepieces. Earrings, bangles, bracelets and watches with a refined gold aesthetic." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Poppins:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="yhudee">
+  <div class="bg-wash"></div>
+  <div class="bg-grain"></div>
+
+  <header class="nav">
+    <div class="brand"><span class="crown">♛</span><span>YHUDEE <em>Empire</em></span></div>
+    <nav class="links">
+      <a href="#shop">Collection</a>
+      <a href="#features">Why Yhudee</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button id="themeBtn" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">☾</button>
+      <button id="openBag" class="cart-btn">Bag <span class="count" id="count">0</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="kicker">Luxury · Curated · Timeless</div>
+      <h1>Jewelry crafted for those who <span class="accent">Define Elegance</span>.</h1>
+      <p class="lead">Yhudee Empire Store curates an exclusive collection of timepieces and fine jewelry — quietly refined, deeply lustrous, and made to be worn for a lifetime.</p>
+      <div class="cta">
+        <a href="#shop" class="btn primary">Explore Collection →</a>
+        <button class="btn ghost" id="waHero">Chat on WhatsApp</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hv-ring"></div>
+      <div class="hv-ring r2"></div>
+      <div class="hv-core"></div>
+      <span class="hv-dot d1"></span><span class="hv-dot d2"></span>
+      <span class="hv-dot d3"></span><span class="hv-dot d4"></span>
+    </div>
+  </section>
+
+  <div class="stats"><div class="stats-inner">
+    <div class="stat"><div class="n">47+</div><div class="l">Signature Pieces</div></div>
+    <div class="stat"><div class="n">100%</div><div class="l">Quality Assured</div></div>
+    <div class="stat"><div class="n">24/7</div><div class="l">Concierge Service</div></div>
+    <div class="stat"><div class="n">36</div><div class="l">States Delivered</div></div>
+  </div></div>
+
+  <section class="marquee-wrap" aria-hidden="true"><div class="marquee" id="mqRight"></div></section>
+
+  <section id="shop" class="section">
+    <div class="section-head">
+      <div class="kicker">The Collection</div>
+      <h2>Twenty-seven pieces. Each one, a quiet statement.</h2>
+      <p>Search, filter and discover timepieces and fine jewelry hand-selected for craft and finish.</p>
+    </div>
+    <div class="controls">
+      <div class="search"><input id="q" placeholder="Search the collection…" /></div>
+      <div class="chips" id="chips"></div>
+      <select id="sort" class="sort">
+        <option value="featured">Featured</option>
+        <option value="low">Price: Low → High</option>
+        <option value="high">Price: High → Low</option>
+        <option value="name">Name A→Z</option>
+      </select>
+    </div>
+    <div class="opt-row">
+      <label class="lux-check"><input type="checkbox" id="boxBag" checked /><span class="box"></span><span>Box & Bag</span></label>
+      <label class="lux-check"><input type="checkbox" id="adjuster" checked /><span class="box"></span><span>Free Adjuster</span></label>
+      <label class="lux-check"><input type="checkbox" id="giftWrap" /><span class="box"></span><span>Gift Wrap (+₦1,500)</span></label>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="section-head">
+      <div class="kicker">Why Yhudee Empire</div>
+      <h2>Standards that match your standing.</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><div class="ic">✦</div><h3>Hand-selected craft</h3><p>Every piece is reviewed for finish, weight and brilliance before it enters our collection.</p></div>
+      <div class="feature"><div class="ic">◆</div><h3>Box, bag & adjuster</h3><p>Watches arrive presentation-ready with original packaging and a complimentary sizing adjuster.</p></div>
+      <div class="feature"><div class="ic">♛</div><h3>WhatsApp concierge</h3><p>Direct WhatsApp line for sizing, custom requests, and nationwide delivery coordination.</p></div>
+    </div>
+  </section>
+
+  <section class="marquee-wrap" aria-hidden="true"><div class="marquee left" id="mqLeft"></div></section>
+
+  <section id="contact" class="contact"><div class="section">
+    <div class="section-head">
+      <div class="kicker">Contact</div>
+      <h2>Speak with the Empire.</h2>
+      <p>Orders, custom requests and concierge — we reply quickly.</p>
+    </div>
+    <div class="contact-grid">
+      <a class="c-card" href="mailto:yhudeeempire@gmail.com"><span class="ic">✉</span><strong>Email</strong><em>yhudeeempire@gmail.com</em></a>
+      <button class="c-card" id="waContact"><span class="ic">⌬</span><strong>Chat on WhatsApp</strong><em>+234 810 060 3289</em></button>
+    </div>
+  </div></section>
+
+  <footer class="foot">© <span id="yr"></span> Yhudee Empire Store — All royalty reserved.</footer>
+
+  <div class="drawer-back" id="back"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-head"><h3>Your Bag</h3><button id="closeBag">✕</button></div>
+    <div class="drawer-body" id="bagBody"></div>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="total">₦0</strong></div>
+      <button class="btn primary full" id="checkout">Checkout via Email</button>
+      <button class="btn ghost full" id="waCheckout">Order on WhatsApp</button>
+    </div>
+  </aside>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
