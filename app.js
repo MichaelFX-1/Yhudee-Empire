@@ -31,7 +31,7 @@ const PRODUCTS = [
   { id:30, name:"Leg Chain — Gold", price:2500, cat:"Leg Chain", img:"/products/Leg Chain-Gold.jpg", desc:"Rare Silver Piece Leg Chain — rare, timeless, unforgettable."},
   { id:31, name:"Leg Bracelet — Silver", price:2500, cat:"Leg Chain", img:"/products/Leg Bracelet-Silver.jpg", desc:"Rare Silver Piece Leg Chain — rare, timeless, unforgettable."},
   { id:32, name:"Earring", price:3500, cat:"Earrings", img:"/products/Earring.jpg", desc:"Delicate floral gem with a soft color glow"},
-  { id:33, name:"Leg Chain — Gold", price:3500, cat:"Earrings", img:"/products/Earring3.jpg", desc:"Rare golden white Piece earring — rare, floral, beautiful."},
+  { id:33, name:"Golden White Earring", price:3500, cat:"Earrings", img:"/products/Earring3.jpg", desc:"Rare golden white Piece earring — rare, floral, beautiful."},
   { id:34, name:"Matte Black BLue Twin-Set", price:27000, cat:"Timepieces", img:"/products/Matte Black Blue Twin-Set.jpg", desc:"Twin matte-black-blue watches - Numerical and Indexed pair"},
   { id:35, name:"Premium Ladies Wristwatch Golden", price:21500, cat:"Timepieces", img:"/products/Premium Ladies Wristwatch.jpg", desc:"Premium, Golden, set to the ladies style and premium edge luxurious finish"},
   { id:36, name:"Poedagar Premium Watch", price:25999, cat:"Timepieces", img:"products/Poedagar.jpg", desc:"Poedagar signature — sapphire shine, leather strap." },
