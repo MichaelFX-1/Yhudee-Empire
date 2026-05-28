@@ -150,4 +150,5 @@ $("#waCheckout").onclick = whatsapp; $("#waHero").onclick = whatsapp; $("#waCont
 $("#giftWrap").onchange = e => { state.giftWrap = e.target.checked; renderBag(); };
 $("#yr").textContent = new Date().getFullYear();
 
+
 renderChips(); renderGrid(); renderMarquees(); renderBag();
