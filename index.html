@@ -1,124 +1,300 @@
 <!doctype html>
-<html lang="en" class="theme-light">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Yhudee Empire Store — Luxury Jewelry & Timepieces</title>
-<meta name="description" content="Curated luxury jewelry and premium timepieces. Earrings, bangles, bracelets and watches with a refined gold aesthetic." />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Yhudee Empire — Luxury Fashion House | Timepieces & Fine Jewelry</title>
+<meta name="description" content="Yhudee Empire — a global luxury fashion house. Cinematic timepieces, fine jewelry and curated accessories. Hand-finished. Concierge delivery. WhatsApp order." />
+<meta name="theme-color" content="#0a0a0c" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Poppins:wght@300;400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div class="yhudee">
-  <div class="bg-wash"></div>
-  <div class="bg-grain"></div>
-
-  <header class="nav">
-    <div class="brand"><span class="crown">♛</span><span>YHUDEE <em>Empire</em></span></div>
-    <nav class="links">
-      <a href="#shop">Collection</a>
-      <a href="#features">Why Yhudee</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="nav-right">
-      <button id="themeBtn" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">☾</button>
-      <button id="openBag" class="cart-btn">Bag <span class="count" id="count">0</span></button>
+<body class="theme-dark">
+  <!-- Cinematic Intro -->
+  <div id="intro" class="intro">
+    <div class="intro-shimmer"></div>
+    <div class="intro-logo">
+      <span class="crown">♛</span>
+      <span class="intro-word">YHUDEE</span>
+      <em class="intro-em">Empire</em>
     </div>
-  </header>
+    <div class="intro-tag">A Luxury Fashion House · Est. Lagos</div>
+    <div class="intro-bar"><span></span></div>
+  </div>
 
-  <section class="hero">
-    <div>
-      <div class="kicker">Luxury · Curated · Timeless</div>
-      <h1>Jewelry crafted for those who <span class="accent">Define Elegance</span>.</h1>
-      <p class="lead">Yhudee Empire Store curates an exclusive collection of timepieces and fine jewelry — quietly refined, deeply lustrous, and made to be worn for a lifetime.</p>
-      <div class="cta">
-        <a href="#shop" class="btn primary">Explore Collection →</a>
-        <button class="btn ghost" id="waHero">Chat on WhatsApp</button>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <div class="yhudee">
+    <div class="bg-wash"></div>
+    <div class="bg-grain"></div>
+    <div class="bg-aurora"></div>
+
+    <!-- NAV -->
+    <header class="nav" id="nav">
+      <div class="brand" data-magnet>
+        <span class="crown">♛</span>
+        <span>YHUDEE <em>Empire</em></span>
       </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hv-ring"></div>
-      <div class="hv-ring r2"></div>
-      <div class="hv-core"></div>
-      <span class="hv-dot d1"></span><span class="hv-dot d2"></span>
-      <span class="hv-dot d3"></span><span class="hv-dot d4"></span>
-    </div>
-  </section>
+      <nav class="links">
+        <a href="#shop">Collection</a>
+        <a href="#drops">Drops</a>
+        <a href="#craft">Craft</a>
+        <a href="#showroom">Showroom</a>
+        <a href="#reviews">Voices</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-right">
+        <button id="themeBtn" class="icon-btn" title="Toggle theme" data-magnet>☾</button>
+        <button id="cartBtn" class="cart-btn" data-magnet>
+          <span>Bag</span><span class="count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
 
-  <div class="stats"><div class="stats-inner">
-    <div class="stat"><div class="n">47+</div><div class="l">Signature Pieces</div></div>
-    <div class="stat"><div class="n">100%</div><div class="l">Quality Assured</div></div>
-    <div class="stat"><div class="n">24/7</div><div class="l">Concierge Service</div></div>
-    <div class="stat"><div class="n">36</div><div class="l">States Delivered</div></div>
-  </div></div>
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+      <div class="hero-grid"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="kicker reveal"><span class="dot"></span>Autumn / Winter Drop · 2026</div>
+          <h1 class="hero-title">
+            <span class="line"><span class="word">Wear</span></span>
+            <span class="line"><span class="word">your</span> <span class="word accent-it">empire.</span></span>
+          </h1>
+          <p class="lead reveal">Yhudee Empire is a long-form luxury fashion universe — timepieces, fine jewelry and accessories engineered for those who treat presence as currency.</p>
+          <div class="cta reveal">
+            <a href="#shop" class="btn primary" data-magnet><span>Enter the Collection</span><i>→</i></a>
+            <button id="waHero" class="btn ghost" data-magnet><span>Concierge on WhatsApp</span></button>
+          </div>
+          <div class="hero-meta reveal">
+            <div><strong>47</strong><span>Signature pieces</span></div>
+            <div><strong>36</strong><span>States delivered</span></div>
+            <div><strong>24/7</strong><span>Concierge line</span></div>
+          </div>
+        </div>
+        <div class="hero-stage">
+          <div class="stage-ring r1"></div>
+          <div class="stage-ring r2"></div>
+          <div class="stage-ring r3"></div>
+          <div class="orbit" id="orbit"></div>
+          <div class="stage-glow"></div>
+        </div>
+      </div>
+      <div class="scroll-hint"><span></span>scroll</div>
+    </section>
 
-  <section class="marquee-wrap" aria-hidden="true"><div class="marquee" id="mqRight"></div></section>
+    <!-- MARQUEE -->
+    <section class="marquee-wrap" aria-hidden><div class="marquee" id="marqueeTop"></div></section>
 
-  <section id="shop" class="section">
-    <div class="section-head">
-      <div class="kicker">The Collection</div>
-      <h2>Twenty-seven pieces. Each one, a quiet statement.</h2>
-      <p>Search, filter and discover timepieces and fine jewelry hand-selected for craft and finish.</p>
-    </div>
-    <div class="controls">
-      <div class="search"><input id="q" placeholder="Search the collection…" /></div>
-      <div class="chips" id="chips"></div>
-      <select id="sort" class="sort">
-        <option value="featured">Featured</option>
-        <option value="low">Price: Low → High</option>
-        <option value="high">Price: High → Low</option>
-        <option value="name">Name A→Z</option>
-      </select>
-    </div>
-    <div class="opt-row">
-      <label class="lux-check"><input type="checkbox" id="boxBag" checked /><span class="box"></span><span>Box & Bag</span></label>
-      <label class="lux-check"><input type="checkbox" id="adjuster" checked /><span class="box"></span><span>Free Adjuster</span></label>
-      <label class="lux-check"><input type="checkbox" id="giftWrap" /><span class="box"></span><span>Gift Wrap (+₦1,500)</span></label>
-    </div>
-    <div class="grid" id="grid"></div>
-  </section>
+    <!-- FEATURED COLLECTIONS -->
+    <section id="drops" class="section">
+      <div class="section-head">
+        <div class="kicker">01 · Featured Collections</div>
+        <h2 class="display">The houses within the house.</h2>
+        <p>Four curated worlds — each a different mood, the same standard of finish.</p>
+      </div>
+      <div class="collections">
+        <article class="collection" data-tilt><div class="c-img tp"></div><div class="c-body"><span>01</span><h3>Timepieces</h3><p>Quartz, automatic, dress &amp; statement.</p><a href="#shop">Discover →</a></div></article>
+        <article class="collection" data-tilt><div class="c-img er"></div><div class="c-body"><span>02</span><h3>Fine Earrings</h3><p>Orchid, gem, floral &amp; sculptural.</p><a href="#shop">Discover →</a></div></article>
+        <article class="collection" data-tilt><div class="c-img ba"></div><div class="c-body"><span>03</span><h3>Bangles</h3><p>Pavé crystal, butterfly &amp; double-stack.</p><a href="#shop">Discover →</a></div></article>
+        <article class="collection" data-tilt><div class="c-img lg"></div><div class="c-body"><span>04</span><h3>Leg Chains</h3><p>Gold &amp; silver — quiet provocation.</p><a href="#shop">Discover →</a></div></article>
+      </div>
+    </section>
 
-  <section id="features" class="section">
-    <div class="section-head">
-      <div class="kicker">Why Yhudee Empire</div>
-      <h2>Standards that match your standing.</h2>
-    </div>
-    <div class="features">
-      <div class="feature"><div class="ic">✦</div><h3>Hand-selected craft</h3><p>Every piece is reviewed for finish, weight and brilliance before it enters our collection.</p></div>
-      <div class="feature"><div class="ic">◆</div><h3>Box, bag & adjuster</h3><p>Watches arrive presentation-ready with original packaging and a complimentary sizing adjuster.</p></div>
-      <div class="feature"><div class="ic">♛</div><h3>WhatsApp concierge</h3><p>Direct WhatsApp line for sizing, custom requests, and nationwide delivery coordination.</p></div>
-    </div>
-  </section>
+    <!-- SEASONAL DROPS BANNER -->
+    <section class="drop-banner">
+      <div class="db-bg"></div>
+      <div class="db-inner">
+        <div class="db-tag">Limited Edition · This Season Only</div>
+        <h2 class="display">Poedagar &amp; Tomi — The Leather Chapter.</h2>
+        <p>Three signature timepieces, each numbered, boxed and finished with our concierge adjuster service.</p>
+        <a class="btn primary" href="#shop" data-magnet><span>Reserve a piece</span><i>→</i></a>
+      </div>
+    </section>
 
-  <section class="marquee-wrap" aria-hidden="true"><div class="marquee left" id="mqLeft"></div></section>
+    <!-- SHOP -->
+    <section id="shop" class="section">
+      <div class="section-head">
+        <div class="kicker">02 · The Collection</div>
+        <h2 class="display">Forty-seven pieces. Each one, a quiet statement.</h2>
+        <p>Search, filter and discover. Every promo price is engineered for the way value should feel — generous and final.</p>
+      </div>
 
-  <section id="contact" class="contact"><div class="section">
-    <div class="section-head">
-      <div class="kicker">Contact</div>
-      <h2>Speak with the Empire.</h2>
-      <p>Orders, custom requests and concierge — we reply quickly.</p>
-    </div>
-    <div class="contact-grid">
-      <a class="c-card" href="mailto:yhudeeempire@gmail.com"><span class="ic">✉</span><strong>Email</strong><em>yhudeeempire@gmail.com</em></a>
-      <button class="c-card" id="waContact"><span class="ic">⌬</span><strong>Chat on WhatsApp</strong><em>+234 810 060 3289</em></button>
-    </div>
-  </div></section>
+      <div class="controls glass">
+        <div class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="search" placeholder="Search the collection…" />
+        </div>
+        <div class="chips" id="chips"></div>
+        <select class="sort" id="sort">
+          <option value="featured">Featured</option>
+          <option value="low">Price · low → high</option>
+          <option value="high">Price · high → low</option>
+          <option value="name">Name · A → Z</option>
+        </select>
+      </div>
 
-  <footer class="foot">© <span id="yr"></span> Yhudee Empire Store — All royalty reserved.</footer>
+      <div class="opt-row">
+        <label class="lux-check"><input type="checkbox" checked /><span class="box"></span><span>Box &amp; Bag included</span></label>
+        <label class="lux-check"><input type="checkbox" checked /><span class="box"></span><span>Free Adjuster</span></label>
+        <label class="lux-check"><input type="checkbox" id="giftWrap" /><span class="box"></span><span>Gift Wrap (+₦1,500)</span></label>
+        <label class="lux-check"><input type="checkbox" checked /><span class="box"></span><span>Nationwide concierge delivery</span></label>
+      </div>
 
-  <div class="drawer-back" id="back"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- CRAFT / STORYTELLING -->
+    <section id="craft" class="section craft">
+      <div class="section-head">
+        <div class="kicker">03 · The Craft</div>
+        <h2 class="display">Three rituals, one finish.</h2>
+      </div>
+      <div class="craft-grid">
+        <div class="craft-card reveal-up"><span class="num">01</span><h3>Sourced</h3><p>Atelier-level suppliers across Switzerland, Hong Kong &amp; Lagos. Materials inspected on arrival under daylight conditions.</p></div>
+        <div class="craft-card reveal-up"><span class="num">02</span><h3>Finished</h3><p>Every clasp, dial and stone is tested for tension, brilliance and weight before it earns the Empire mark.</p></div>
+        <div class="craft-card reveal-up"><span class="num">03</span><h3>Delivered</h3><p>Boxed, adjusted, and dispatched with concierge tracking — anywhere in the federation, within 72 hours.</p></div>
+      </div>
+      <div class="craft-strip">
+        <span>Stainless 316L</span><span>·</span><span>Sapphire-clear lens</span><span>·</span><span>Pavé crystal</span><span>·</span><span>Italian leather</span><span>·</span><span>Numbered editions</span><span>·</span><span>Hand-polished finish</span>
+      </div>
+    </section>
+
+    <!-- 3D SHOWROOM -->
+    <section id="showroom" class="section showroom">
+      <div class="section-head">
+        <div class="kicker">04 · The Showroom</div>
+        <h2 class="display">A rotating stage of signature pieces.</h2>
+        <p>Hover to slow the rotation. Click to bring a piece forward.</p>
+      </div>
+      <div class="showroom-stage" id="showroomStage">
+        <div class="ss-floor"></div>
+        <div class="ss-carousel" id="ssCarousel"></div>
+        <div class="ss-controls">
+          <button id="ssPrev" data-magnet>‹</button>
+          <button id="ssNext" data-magnet>›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY WALL -->
+    <section class="section gallery">
+      <div class="section-head">
+        <div class="kicker">05 · Fashion Wall</div>
+        <h2 class="display">Editorial gallery.</h2>
+      </div>
+      <div class="gallery-wall" id="galleryWall"></div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section">
+      <div class="section-head">
+        <div class="kicker">06 · Voices</div>
+        <h2 class="display">From clients across the federation.</h2>
+      </div>
+      <div class="reviews">
+        <figure class="review reveal-up"><blockquote>“The Poedagar arrived boxed, adjusted and on time. It looks twice its price.”</blockquote><figcaption>Adaeze · Lagos</figcaption></figure>
+        <figure class="review reveal-up"><blockquote>“My third order. The earrings collection is unreal — concierge made the whole thing feel private.”</blockquote><figcaption>Halima · Abuja</figcaption></figure>
+        <figure class="review reveal-up"><blockquote>“I bought the Matte Black twin set for my brother and I. We get stopped everywhere we go.”</blockquote><figcaption>Tobi · Port Harcourt</figcaption></figure>
+        <figure class="review reveal-up"><blockquote>“Yhudee is the only store I trust for gifting. Wrap, finish, everything.”</blockquote><figcaption>Ngozi · Enugu</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- DELIVERY -->
+    <section class="section delivery">
+      <div class="del-grid">
+        <div class="del-card glass reveal-up"><div class="ic">◐</div><h3>Lagos · same day</h3><p>Orders before 12 noon arrive the same evening, hand-delivered.</p></div>
+        <div class="del-card glass reveal-up"><div class="ic">◑</div><h3>Federation · 48–72h</h3><p>All 36 states. Tracked. Concierge confirms arrival.</p></div>
+        <div class="del-card glass reveal-up"><div class="ic">◒</div><h3>Returns · 7 days</h3><p>Unworn pieces, original packaging. We handle pickup.</p></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee-wrap" aria-hidden><div class="marquee left" id="marqueeBot"></div></section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="section-head">
+        <div class="kicker">07 · FAQ</div>
+        <h2 class="display">Quietly answered.</h2>
+      </div>
+      <div class="faq" id="faq-list">
+        <details><summary>How do I place an order?</summary><p>Add pieces to your bag, then tap “Order on WhatsApp.” Your cart is auto-formatted into a message — we confirm and dispatch.</p></details>
+        <details><summary>Is the promo price the final price?</summary><p>Yes. The crossed-out standard price is the reference value; the highlighted promo price is what you pay.</p></details>
+        <details><summary>Do watches come with a box and adjuster?</summary><p>Every timepiece ships with original packaging, presentation bag, and a complimentary sizing adjuster.</p></details>
+        <details><summary>Can I customize or request a piece not listed?</summary><p>Absolutely. Reach out via WhatsApp — our concierge sources signature pieces on request.</p></details>
+        <details><summary>What is the return window?</summary><p>Seven days from delivery for unworn pieces in original packaging. We coordinate pickup.</p></details>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="nl-bg"></div>
+      <div class="nl-inner">
+        <div class="kicker">08 · The List</div>
+        <h2 class="display">Be first to the next drop.</h2>
+        <form class="nl-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='You are in.'">
+          <input type="email" required placeholder="your@email.com" />
+          <button class="btn primary" data-magnet><span>Join the list</span><i>→</i></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="foot">
+      <div class="foot-grid">
+        <div>
+          <div class="brand"><span class="crown">♛</span><span>YHUDEE <em>Empire</em></span></div>
+          <p class="foot-tag">A luxury fashion house. Timepieces, jewelry &amp; accessories.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="#shop">Timepieces</a><a href="#shop">Earrings</a><a href="#shop">Bangles</a><a href="#shop">Leg Chain</a>
+        </div>
+        <div>
+          <h4>House</h4>
+          <a href="#craft">The Craft</a><a href="#showroom">Showroom</a><a href="#reviews">Voices</a><a href="#faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Concierge</h4>
+          <a href="mailto:yhudeeempire@gmail.com">yhudeeempire@gmail.com</a>
+          <a href="#" id="waFoot">WhatsApp · +234 810 060 3289</a>
+          <div class="socials"><a href="#">IG</a><a href="#">X</a><a href="#">TT</a></div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© <span id="yr"></span> Yhudee Empire — All royalty reserved.</span>
+        <span>Lagos · Federation-wide</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- WhatsApp Floating -->
+  <button class="wa-float" id="waFloat" aria-label="Order on WhatsApp" data-magnet>
+    <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.8 5.5 2.2 7.9L.5 31.5l7.8-2.1A15.5 15.5 0 0 0 16 31.5C24.6 31.5 31.5 24.6 31.5 16S24.6.5 16 .5zm0 28.3c-2.5 0-4.9-.7-7-2l-.5-.3-4.6 1.3 1.3-4.5-.3-.5a12.8 12.8 0 1 1 11.1 6zm7.1-9.6c-.4-.2-2.3-1.1-2.6-1.3-.4-.1-.6-.2-.9.2-.2.4-1 1.3-1.2 1.5-.2.2-.5.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.3-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.5.5-.7.2-.2.2-.4.4-.6.1-.2.1-.4 0-.6 0-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9 0 1.7 1.3 3.4 1.4 3.6.2.2 2.5 3.9 6.1 5.3 3 1.2 3.6.9 4.2.9.6 0 2.1-.8 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.1-.4-.2-.7-.4z"/></svg>
+    <span>Order via WhatsApp</span>
+  </button>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-back" id="drawerBack"></div>
   <aside class="drawer" id="drawer">
-    <div class="drawer-head"><h3>Your Bag</h3><button id="closeBag">✕</button></div>
-    <div class="drawer-body" id="bagBody"></div>
+    <div class="drawer-head"><h3>Your Bag</h3><button id="closeDrawer">✕</button></div>
+    <div class="drawer-body" id="drawerBody"></div>
     <div class="drawer-foot">
       <div class="total"><span>Total</span><strong id="total">₦0</strong></div>
-      <button class="btn primary full" id="checkout">Checkout via Email</button>
-      <button class="btn ghost full" id="waCheckout">Order on WhatsApp</button>
+      <button class="btn primary full" id="waOrderBtn">Order on WhatsApp</button>
+      <button class="btn ghost full" id="checkoutBtn">Checkout via Email</button>
     </div>
   </aside>
-</div>
-<script src="app.js"></script>
+
+  <!-- GSAP for cinematic motion -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
